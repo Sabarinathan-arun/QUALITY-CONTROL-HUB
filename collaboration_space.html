@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collaboration Space</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .chat-container {
+      max-width: 400px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .chat-header {
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .chat-messages {
+      padding: 10px;
+      overflow-y: scroll;
+      max-height: 300px;
+    }
+
+    .chat-messages div {
+      margin-bottom: 10px;
+      padding: 8px;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+    }
+
+    .user-message {
+      align-self: flex-end;
+      background-color: #3498db;
+      color: #8a8888;
+    }
+
+    .chat-input {
+      display: flex;
+      padding: 10px;
+      background-color: #f0f0f0;
+    }
+
+    #message-input {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      border-radius: 3px;
+      margin-right: 5px;
+    }
+
+    #send-button {
+      border: none;
+      background-color: #3498db;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    #send-button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <br><br>
+  <div style="display: flex;justify-content: center;font-weight: bold;font-size: 25px;"><h3>Collaboration Space</h3></div>
+  <div class="chat-container" style="transform: translateY(100%);">
+    <div class="chat-header">ChatBox</div>
+    <div class="chat-messages" id="chat-messages"></div>
+    <div class="chat-input">
+      <input type="text" id="message-input" placeholder="Type your message...">
+      <button id="send-button">Send</button>
+    </div>
+  </div>
+
+  <script>
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
+    const chatMessages = document.getElementById('chat-messages');
+
+    sendButton.addEventListener('click', () => {
+      const message = messageInput.value;
+      if (message.trim() !== '') {
+        const messageElement = document.createElement('div');
+        messageElement.textContent = message;
+        messageElement.classList.add('user-message'); // Add the user message class
+        chatMessages.appendChild(messageElement);
+        messageInput.value = '';
+      }
+    });
+  </script>
+</body>
+</html>

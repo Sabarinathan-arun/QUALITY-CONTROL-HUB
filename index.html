@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    /* Your CSS styles here */
+  </style>
+</head>
+<body>
+    <div style="display: flex;justify-content: center;">
+  <div class="login-container" style="display: flex;flex-direction: column;border: 2px solid #aba8a8;border-radius: 15px;align-items: center;width: 500px;justify-content: center;margin-top: 15%;height: 300px;padding-top: 0;">
+    <div class="login-header" style="color: black;font-weight: 600;margin-top: -30px;font-size: 20px;margin-bottom: 20px;">Login</div>
+    <form id="login-form">
+      <div class="input-group">
+        <label for="login-username" class="input-label">Username</label>
+        <input type="text" id="login-username" class="input-field" required style="margin-bottom: 20px;border-radius: 10px;">
+      </div>
+      <div class="input-group">
+        <label for="login-password" class="input-label">Password</label>
+        <input type="password" id="login-password" class="input-field" required style="margin-bottom: 20px;border-radius: 10px;">
+      </div>
+      <button type="submit" class="login-button" style="color: #ffffff;background-color: orangered;border-radius: 15px;font-weight: 700;border: none;transform: translateX(120%);height: 30px;width: 70px;">Login</button>
+    </form>
+    <p>Don't have an account? <a href="signup.html" style="text-decoration: none;">Sign Up</a></p>
+  </div>
+</div>
+  <script>
+    let button=document.querySelector('.login-button')
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevents the form from submitting normally
+
+      const loginUsername = document.getElementById('login-username').value;
+      const loginPassword = document.getElementById('login-password').value;
+
+      // Here, you'd typically retrieve the user data from a database
+      // For demonstration, we'll use localStorage for the example
+      const storedPassword = localStorage.getItem(loginUsername);
+
+      if (storedPassword === loginPassword) {
+        alert(`Welcome, ${loginUsername}!`);
+        window.location.href = 'dashboard.html'; // Redirect to the webcam page
+      } else {
+        alert('Invalid username or password. Please try again.');
+      }
+    });
+   
+  </script>
+</body>
+</html>

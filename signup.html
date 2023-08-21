@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style>
+    .signup-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(100%);
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <div class="signup-header" style="color: #000000;font-weight: 600;font-size: 30px;">Sign Up</div><br><br>
+    <form id="signup-form">
+      <div class="input-group">
+        <label for="signup-username" class="input-label">Username</label>
+        <input type="text" id="signup-username" class="input-field" required style="border-radius: 15px;border: 2px solid #939292;">
+      </div><br>
+      <div class="input-group">
+        <label for="signup-password" class="input-label">Password</label>
+        <input type="password" id="signup-password" class="input-field" required  style="border-radius: 15px;border: 2px solid #939292;">
+      </div><br>
+      <div style="display: flex;justify-content: center;"><button type="submit" class="signup-button" style="background-color: orangered;border-radius: 15px;border: none;color: #ffffff;width: 80px;height: 20px;">Sign Up</button></div>
+    </form>
+    <p>Already have an account? <a href="index.html" style="text-decoration: none;">Log In</a></p>
+  </div>
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevents the form from submitting normally
+
+      const signUpUsername = document.getElementById('signup-username').value;
+      const signUpPassword = document.getElementById('signup-password').value;
+
+      // Here, you'd typically store the user data in a database
+      // For demonstration, we'll store it in memory
+      localStorage.setItem(signUpUsername, signUpPassword);
+
+      alert(`User '${signUpUsername}' signed up successfully!`);
+    });
+  </script>
+</body>
+</html>
