@@ -1,27 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+<urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
   <loc>https://sabarinathan-arun.github.io/QUALITY-CONTROL-HUB/</loc>
   <lastmod>2023-08-21T13:48:53+00:00</lastmod>
   <priority>1.00</priority>
 </url>
+
 <url>
   <loc>https://sabarinathan-arun.github.io/QUALITY-CONTROL-HUB/signup.html</loc>
   <lastmod>2023-08-21T13:48:53+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+
 <url>
   <loc>https://sabarinathan-arun.github.io/QUALITY-CONTROL-HUB/index.html</loc>
   <lastmod>2023-08-21T13:48:53+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
+<url>
+  <loc>https://sabarinathan-arun.github.io/QUALITY-CONTROL-HUB/dashboard</loc>
+  <lastmod>2023-08-21T14:24:29+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+
+<url>
+  <loc>https://sabarinathan-arun.github.io/QUALITY-CONTROL-HUB/webcam_defect_detection.html</loc>
+  <lastmod>2023-08-21T14:24:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+<url>
+  <loc>https://sabarinathan-arun.github.io/QUALITY-CONTROL-HUB/collaboration_space.html</loc>
+  <lastmod>2023-08-21T14:24:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 
 </urlset>
